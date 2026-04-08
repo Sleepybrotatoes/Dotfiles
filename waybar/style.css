@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────────────
-   °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh  shhheersh
+   Waybar Style.css by Kynan
    Waybar CSS styling
    vers. 1.0
    ────────────────────────────────────────────────────────────────────────── */
@@ -66,17 +66,16 @@ window#waybar {
 #bluetooth,
 #custom-bluetooth,
 #custom-brightness,
+#custom-pavucontrol,
 #custom-volume,
 #custom-cpu_bar,
 #custom-ram_bar,
 #custom-battery,
 #custom-power,
-#custom-asus-profile,
 #network,
 #battery,
 #pulseaudio,
 #backlight,
-#custom-vpn,
 #clock,
 #tray {
   padding: 6px 12px;
@@ -213,11 +212,10 @@ window#waybar {
 #custom-ram_bar:hover,
 #pulseaudio:hover,
 #network:hover,
-#custom-vpn:hover,
 #bluetooth:hover,
 #custom-bluetooth:hover,
 #custom-power:hover,
-#custom-asus-profile:hover,
+#custom-pavucontrol,
 #custom-battery:hover,
 #battery:hover,
 #backlight:hover,
