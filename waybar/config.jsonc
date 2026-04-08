@@ -1,5 +1,5 @@
 // ──────────────────────────────────────────────────────────────────────────
-//  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
+//  Waybar script by Kynan
 //  Waybar config
 //  vers. 1.0.0
 // ──────────────────────────────────────────────────────────────────────────
@@ -7,9 +7,8 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 0,
-  "margin-bottom": 0,
-  "height": 34,
+  "margin-top": 20,
+  "margin-bottom": 20,
 
   // ── Modules Layout ───────────────────────────────────────────────
   "modules-left": [
@@ -18,7 +17,7 @@
     "network",
     "bluetooth",
     "custom/microphone",
-    "custom/vpn"
+    "custom/pavucontrol'
   ],
 
   "modules-center": [
@@ -75,18 +74,6 @@
     "interval": 5
   },
 
-
-  // ── Asus Profile ─────────────────────────────────────────────────
-  "custom/asus-profile": {
-    "exec": "~/.config/waybar/scripts/asus-profile.sh",
-    "interval": 3,
-    "format": "{}",
-    "tooltip": true,
-    "tooltip-format": "Toggle ASUS profile",
-    "on-click": "/home/pewds/.config/cycle-profile.sh"
-  },
-
-
   // ── Battery (scripted + built-in) ────────────────────────────────
   "custom/battery": {
     "exec": "~/.config/waybar/scripts/battery.sh",
@@ -123,6 +110,11 @@
     "tooltip-format": "Mic Toggle",
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
   },
+
+  // ── Pavucontrol ──────────────────────────────────────────────────
+
+  "custom/pavucontrol" {
+   }
 
   // ── Brightness ───────────────────────────────────────────────────
   "custom/brightness": {
@@ -191,18 +183,6 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-  },
-
-
-  // ── VPN ──────────────────────────────────────────────────────────
-  "custom/vpn": {
-    "exec": "~/.config/waybar/scripts/nordvpn-status.sh",
-    "interval": 5,
-    "on-click": "~/.config/waybar/scripts/nordvpn-toggle.sh",
-    "format": "{}",
-    "markup": "pango",
-    "tooltip": true,
-    "tooltip-format": "VPN Status / Toggle"
   },
 
   // ── Power ────────────────────────────────────────────────────────
